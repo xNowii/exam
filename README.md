@@ -12,3 +12,4 @@ Ce qui a été réalisé :
 Ce que je n'ai pas réussi : 
 * Changement de la forme du curseur du joueur (autre que carré ou rectangle)
 * Ajout d'obstacles
+* Ajout de tirs
