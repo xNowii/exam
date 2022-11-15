@@ -1,6 +1,9 @@
 #myCanvas {
-    border: 10px solid blue;
-
+    border: 5px solid green;
+    background-color: #caf15a;
+    width: 700px;
+    height: 500px;
+    box-sizing: border-box;
   }
   
   #controls {
