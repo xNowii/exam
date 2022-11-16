@@ -13,3 +13,4 @@ Ce qui a été réalisé :
 Ce que je n'ai pas réussi : 
 * Ajout d'obstacles
 * Ajout de tirs
+* Changement de la trajectoire des balles en fonction des couleurs
