@@ -8,8 +8,8 @@ Ce qui a été réalisé :
 * Modification de l'emplacement des infos sur l'écran de jeu (balles mangées, score, Level, Nbre de vie,...)
 * Changement du nombre de balles par niveau
 * Changement de la couleur de fond
+* Changement de la forme du curseur du joueur
 
 Ce que je n'ai pas réussi : 
-* Changement de la forme du curseur du joueur (autre que carré ou rectangle)
 * Ajout d'obstacles
 * Ajout de tirs
