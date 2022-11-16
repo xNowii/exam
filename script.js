@@ -14,12 +14,11 @@ let nbVies = 3;
 let score = 0;
 let gameState = 'Game Over';
 
-var player = { 
+var player = {
     x: 10,
     y: 10,
-    width: 1,
+    width: 30,
     height: 30,
-    color: 'red'
 }
 
 window.onload = function init() {
@@ -89,9 +88,7 @@ function changeColorToEat(color) {
     colorToEat = color;
 }
 
-function changePlayerColor(color) {
-    player.color = color;
-}
+
 
 function changeBallSpeed(coef) {
     globalSpeedMultiplier = coef;
@@ -123,7 +120,7 @@ function mainLoop() {
 
     if (gameState === 'PLAYING') {
         // draw the ball and the player
-        drawFilledRectangle(player);
+        drawPlayer(player);
         drawAllBalls(balls);
         drawInfosTextuelles(balls);
 
@@ -162,7 +159,7 @@ function createBalls(n) {
         var b = {
             x: w / 2,
             y: h / 2,
-            radius: 5 + 30 * Math.random(), // between 5 and 35
+            radius: 7 + 30 * Math.random(), // between 5 and 35
             speedX: -5 + 10 * Math.random(), // between -5 and + 5
             speedY: -5 + 10 * Math.random(), // between -5 and + 5
             color: getARandomColor(),
@@ -197,7 +194,7 @@ function drawInfosTextuelles(balls) {
     } else if (goodBallsEaten === numberOfGoodBalls) {
         // On a gagné, on a mangé toutes les bonnes balles
         ctx.fillText("You Win! <3 Final score : " + (initialNumberOfBalls - wrongBallsEaten),
-            20, 30);
+            10, 20);
         // on change de niveau
         passerAuNiveauSuivant()
     } else {
@@ -214,7 +211,7 @@ function drawInfosTextuelles(balls) {
 
 function passerAuNiveauSuivant() {
     level++;
-    globalSpeedMultiplier += 0.2;
+    globalSpeedMultiplier += 0.1;
     startGame(level);
 }
 
@@ -306,19 +303,20 @@ function testCollisionBallWithWalls(b) {
     }
 }
 
-function drawFilledRectangle(r) {
-    // GOOD practice: save the context, use 2D trasnformations
+function drawPlayer(r) { 
     ctx.save();
 
-    // translate the coordinate system, draw relative to it
-    ctx.translate(r.x, r.y);
+    const playerImg = new Image();
+    playerImg.src = "https://www.icons101.com/icons/12/Super_Mario_by_Sandro_Pereira/128/Chain%20Chomp.png";
 
-    ctx.fillStyle = r.color;
-    // (0, 0) is the top left corner of the monster.
-    ctx.fillRect(0, 0, r.width, r.height);
+    ctx.translate(r.x - r.width / 2, r.y - r.height / 2);
 
-    // GOOD practice: restore the context
+    // ctx.fillStyle = r.color;
+    // ctx.fillRect(0, 0, r.width, r.height);
+    ctx.drawImage(playerImg, 0, 0);
     ctx.restore();
+
+
 }
 function drawFilledCircle(c) {
     // GOOD practice: save the context, use 2D trasnformations
