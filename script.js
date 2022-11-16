@@ -17,8 +17,8 @@ let gameState = 'Game Over';
 var player = {
     x: 10,
     y: 10,
-    width: 30,
-    height: 30,
+    width: 50,
+    height: 50,
 }
 
 window.onload = function init() {
@@ -58,7 +58,7 @@ function traiteToucheEnfoncee(evt) {
 }
 
 function startGame(level) {
-    let nb = level + 2;
+    let nb = level + 0;
 
     do {
         balls = createBalls(nb);
