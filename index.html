@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Animating balls and adding input fields</title>
+  <title>Eating balls</title>
   <link rel="stylesheet" href="./css/styles.css">
   <script src="./js/script.js"></script>
 </head>
@@ -16,11 +16,7 @@
            value=10 id="nbBalls"
            oninput="changeNbBalls(this.value);">
     <p></p>
-   <label for="colorChooser">Player color: </label>
-    <input type="color" value='#FF0000'
-           oninput="changePlayerColor(this.value);" id="colorChooser">
-    <p></p>
-      <label for="selectColorOfBallToEat">Color of ball to eat: </label>
+   <label for="selectColorOfBallToEat">Color of ball to eat: </label>
       <select onchange="changeColorToEat(this.value);" id="selectColorOfBallToEat">
         <option value='red'>red</option>
         <option value='blue'>blue</option>
