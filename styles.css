@@ -5,7 +5,24 @@
     height: 500px;
     box-sizing: border-box;
   }
-  
+
+ canvas:hover {
+  cursor: pointer;
+} 
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
   #controls {
     float:left;
+    background-color: #7B68EE;
+    border: 5px inset #9400D3;
+    margin-top: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    color: white;
+}
   }
