@@ -6,11 +6,12 @@ Ce qui a été réalisé :
 * Changement de la taille et de l'empaclement du cadre de jeu (pour l'adapter à la taille de mon écran)
 * Quelques changements sur l'écran de "Game Over" (police d'écriture et emplacement, retrait de l'animation) 
 * Modification de l'emplacement des infos sur l'écran de jeu (balles mangées, score, Level, Nbre de vie,...)
-* Changement du nombre de balles par niveau
+* Changement du nombre de balles par niveau (je l'ai peut-être remis comme il était après car c'était trop dur, je ne sais plus)
 * Changement de la couleur de fond du jeu et des informations sous le jeu
-* Changement de la forme du curseur du joueur
+* Changement de la forme du curseur du joueur (il est un peu gros, mais je n'arrive pas à réduire la taille de l'image)
+* Ajout d'un timer (parfois il ne fonctionne pas, je ne sais pas pourquoi donc je n'arrive pas à corriger l'erreur)
 
 Ce que je n'ai pas réussi : 
-* Ajout d'obstacles
-* Ajout de tirs
-* Changement de la trajectoire des balles en fonction des couleurs
+* Ajout d'obstacles (je voulais faire apparaitre des obstacles qui se déplacaient de la droite vers la gauche comme dans un platformer mais je n'arrive pas à les faire apparaitre)
+* Ajout de tirs (je ne sais même pas par quoi commencer pour y arriver)
+* Ajout d'une possibilité de mettre le jeu en pause (j'ai essayé de mettre un else if et la détection d'appui sur la touche espace quand le jeu est en cours mais rien n'y fait).
