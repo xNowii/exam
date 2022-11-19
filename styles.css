@@ -1,8 +1,10 @@
 #myCanvas {
     border: 5px solid green;
-    background-color: #caf15a;
-    width: 700px;
-    height: 500px;
+   background-image: url(https://wallpaper.dog/large/20403187.png);
+   background-repeat: no-repeat;
+  background-position: right;
+    width: 800px;
+    height: 600px;
     box-sizing: border-box;
   }
 
