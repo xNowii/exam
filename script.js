@@ -171,11 +171,11 @@ function createBalls(n) {
     // create n balls
     for (var i = 0; i < n; i++) {
         var b = {
-            x: w / 2,
-            y: h / 2,
+            x: w / 1.5,
+            y: h / 1,
             radius: 7 + 30 * Math.random(), // between 5 and 35
-            speedX: -5 + 10 * Math.random(), // between -5 and + 5
-            speedY: -5 + 10 * Math.random(), // between -5 and + 5
+            speedX: -2 + 6 * Math.random(), // between -5 and + 5
+            speedY: -2 + 6 * Math.random(), // between -5 and + 5
             color: getARandomColor(),
         }
         // add ball b to the array
