@@ -13,7 +13,8 @@ let level = 1;
 let nbVies = 3;
 let score = 0;
 let gameState = 'Game Over';
-
+let timer;
+let testerCollision = false;
 var player = {
     x: 10,
     y: 10,
@@ -58,7 +59,11 @@ function traiteToucheEnfoncee(evt) {
 }
 
 function startGame(level) {
-    let nb = level + 0;
+    timer = 60;
+  if (level < 5) nb = level;
+  if (level >= 5) { 
+    nb = level + 1;
+  }
 
     do {
         balls = createBalls(nb);
@@ -117,6 +122,15 @@ function movePlayerWithMouse() {
 function mainLoop() {
     // 1 - clear the canvas
     ctx.clearRect(0, 0, w, h);
+  
+  if(timer !== 0) { 
+    testerCollision = false;
+    timer--;
+  if(timer === 0)  {
+      testerCollision = true;
+    }
+  }
+  
 
     if (gameState === 'PLAYING') {
         // draw the ball and the player
@@ -235,13 +249,16 @@ function moveAllBalls(ballArray) {
         } else {
             b.x += (b.speedX * globalSpeedMultiplier);
             b.y += (b.speedY * globalSpeedMultiplier);
+      if (b.color === "green")
+          b.x += Math.random()*100;
         }
 
         testCollisionBallWithWalls(b);
-
-        testCollisionWithPlayer(b, index);
-    });
+      if(testerCollision) {
+        testCollisionWithPlayer(b,index);
 }
+ })
+    }
 
 function testCollisionWithPlayer(b, index) {
     if (circRectsOverlap(player.x, player.y,
